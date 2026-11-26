@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio digital académico GRUPO ELEVEN.">
+  <title>GRUPO ELEVEN | Portafolio Digital</title>
+
+  <!-- Recursos utilizados en la estructura base -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="GRUPO ELEVEN, inicio">
+        <span class="brand-mark">B</span>
+        <span class="brand-name">GRUPO ELEVEN <small>PORTAFOLIO DIGITAL</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button"
+              aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="main-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#portafolio">Proyectos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#creditos">Créditos</a>
+      </div>
+      <a class="nav-cta" href="#portafolio">Explorar proyectos <i class="fa-solid fa-arrow-right"></i></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO: basado en inicio.html -->
+    <section class="hero" id="inicio">
+      <div class="hero-glow hero-glow-left" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-right" aria-hidden="true"></div>
+      <div class="hero-circuit circuit-left" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-circuit circuit-right" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero-content container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Bienvenidos a nuestro espacio digital</span>
+        <h1>Portafolio <span>Digital</span></h1>
+        <p class="hero-university">Universidad Dr. Andrés Bello</p>
+        <p class="hero-description">
+          Descubre las innovaciones, el software y los proyectos tecnológicos
+          desarrollados por nuestros estudiantes de Ingeniería en Sistemas.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-yellow" href="#portafolio">Ver proyectos <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="button button-outline" href="#equipo">Conocer al equipo</a>
+        </div>
+        <div class="hero-tags" aria-label="Áreas del portafolio">
+          <span><i class="fa-solid fa-pen-nib"></i> Diseño</span>
+          <span><i class="fa-solid fa-code"></i> Tecnología</span>
+          <span><i class="fa-solid fa-lightbulb"></i> Innovación</span>
+        </div>
+      </div>
+      <a class="scroll-indicator" href="#portafolio" aria-label="Desplazarse a proyectos"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- PORTAFOLIO: contenido procedente del PDF entregado -->
+    <section class="section portfolio-section" id="portafolio">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Nuestros trabajos</span>
+          <h2>Portafolio <span>Multimedia</span></h2>
+          <p>
+            Aquí presentamos una selección de los proyectos realizados durante el ciclo,
+            utilizando diferentes herramientas de diseño y edición multimedia.
+          </p>
+        </div>
+
+        <div class="filter-list" id="filter-buttons" aria-label="Filtrar proyectos">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-btn" type="button" data-filter="gimp" aria-pressed="false"><i class="fa-solid fa-image"></i> GIMP</button>
+          <button class="filter-btn" type="button" data-filter="inkscape" aria-pressed="false"><i class="fa-solid fa-pen-nib"></i> Inkscape</button>
+          <button class="filter-btn" type="button" data-filter="audacity" aria-pressed="false"><i class="fa-solid fa-headphones"></i> Audacity</button>
+          <button class="filter-btn" type="button" data-filter="video" aria-pressed="false"><i class="fa-solid fa-video"></i> OpenShot</button>
+          <button class="filter-btn" type="button" data-filter="campana" aria-pressed="false"><i class="fa-solid fa-bullhorn"></i> Campañas</button>
+        </div>
+
+        <div class="project-toolbar">
+          <span>Proyectos disponibles</span>
+          <strong id="project-count" aria-live="polite">6 proyectos</strong>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <article class="project-card" data-category="gimp">
+            <div class="project-media"><img src="img/proyectos/gimp-gatito.png" alt="Composición de un gatito sobre un paisaje ilustrado"><span class="project-tag">GIMP</span></div>
+            <div class="project-body"><h3>Composición digital: gatito</h3><p>Composición de un gatito recortado e integrado en un paisaje con elementos gráficos.</p>
+              <div class="project-actions">
+                <button class="text-button project-details" type="button" data-project="gimp-gatito">Ver detalles <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="download-link" href="archivos/Practica gato GIMP.png" download>Descargar PNG</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="gimp">
+            <div class="project-media"><img src="img/proyectos/gimp-composicion.png" alt="Composición con oso azul y conejo sobre paisaje"><span class="project-tag">GIMP</span></div>
+            <div class="project-body"><h3>Composición digital: personajes</h3><p>Integración de personajes sobre un fondo de paisaje mediante edición de imágenes.</p>
+              <div class="project-actions">
+                <button class="text-button project-details" type="button" data-project="gimp-personajes">Ver detalles <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="download-link" href="archivos/practica.Gimp.png" download>Descargar PNG</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="inkscape">
+            <div class="project-media"><img src="img/proyectos/inkscape-generaciones.png" alt="Cartel vectorial Las nuevas generaciones"><span class="project-tag">INKSCAPE</span></div>
+            <div class="project-body"><h3>Las nuevas generaciones</h3><p>Cartel ilustrado con figuras geométricas, personajes y composición de color.</p>
+              <div class="project-actions">
+                <button class="text-button project-details" type="button" data-project="inkscape-generaciones">Ver detalles <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="download-link" href="archivos/inskape.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="inkscape">
+            <div class="project-media"><img src="img/proyectos/inkscape-talleres.png" alt="Cartel vectorial En tus talleres"><span class="project-tag">INKSCAPE</span></div>
+            <div class="project-body"><h3>En tus talleres</h3><p>Ilustración vectorial de objetos artesanales organizados en una composición gráfica.</p>
+              <div class="project-actions">
+                <button class="text-button project-details" type="button" data-project="inkscape-talleres">Ver detalles <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="download-link" href="archivos/inskipe.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="audacity">
+            <div class="project-media media-audio"><i class="fa-solid fa-wave-square" aria-hidden="true"></i><span class="project-tag">AUDACITY</span></div>
+            <div class="project-body"><h3>Locución FocusMind</h3><p>Archivo de locución en formato WAV, preparado como ejercicio de edición de audio.</p>
+              <audio class="audio-player" controls preload="metadata"><source src="archivos/Practica_Locucion_FocusMind audacity.wav" type="audio/wav">Tu navegador no soporta audio.</audio>
+              <div class="project-actions">
+                <button class="text-button project-details" type="button" data-project="audacity-focusmind">Ver detalles <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="download-link" href="archivos/Practica_Locucion_FocusMind audacity.wav" download>Descargar WAV</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="video">
+            <div class="project-media"><img src="img/proyectos/openshot-video.png" alt="Fotograma del video con escena navideña en una pista de hielo"><span class="project-tag">OPENSHOT</span></div>
+            <div class="project-body"><h3>Video: escena navideña</h3><p>Producción audiovisual de 1 minuto y 11 segundos con una escena de ambiente navideño.</p>
+              <div class="project-actions">
+                <button class="text-button project-details" type="button" data-project="openshot-navidad">Ver detalles <i class="fa-solid fa-arrow-right"></i></button>
+                <a class="download-link" href="archivos/video openshot.mp4" target="_blank" rel="noopener">Ver video</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="no-results" id="no-results" hidden>No hay trabajos cargados en esta categoría por el momento.</p>
+      </div>
+    </section>
+
+    <!-- EQUIPO: contenido de index.html -->
+    <section class="section team-section" id="equipo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Quiénes somos</span>
+          <h2>Nuestro equipo de <span>trabajo</span></h2>
+          <p>Conoce a los integrantes que forman parte de nuestro proyecto universitario.</p>
+        </div>
+        <div class="team-grid" id="lista-equipo"></div>
+      </div>
+    </section>
+
+    <!-- CRÉDITOS: contenido de creditos.html -->
+    <section class="section credits-section" id="creditos">
+      <div class="container credits-container">
+        <div class="section-heading">
+          <span class="section-kicker">Universidad Dr. Andrés Bello</span>
+          <h2>Créditos del <span>proyecto</span></h2>
+          <p>Información académica e institucional.</p>
+        </div>
+        <div class="credits-card">
+          <div class="credits-grid">
+            <div class="credit-item"><span class="credit-icon"><i class="fa-solid fa-book"></i></span><div><small>Asignatura</small><strong>Software de diseño y edición multimedia</strong></div></div>
+            <div class="credit-item"><span class="credit-icon yellow"><i class="fa-solid fa-chalkboard-user"></i></span><div><small>Docente</small><strong>Franklin Geovanny Buruca Hernández</strong></div></div>
+            <div class="credit-item"><span class="credit-icon yellow"><i class="fa-solid fa-graduation-cap"></i></span><div><small>Carrera</small><strong>Ingeniería en Sistemas y Computación</strong></div></div>
+            <div class="credit-item"><span class="credit-icon"><i class="fa-regular fa-calendar"></i></span><div><small>Año académico</small><strong>2026</strong></div></div>
+          </div>
+          <div class="credits-repository">
+            <p>Consulta el repositorio del proyecto:</p>
+            <span class="download-link" style="font-size:12px;cursor:default"><i class="fa-brands fa-github"></i> Repositorio pendiente de publicación</span>
+          </div>
+          <p class="credits-note"><i class="fa-solid fa-circle-info"></i> Portafolio académico del GRUPO ELEVEN. El enlace del repositorio puede añadirse cuando esté publicado.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">GRUPO ELEVEN</div>
+      <h2>Universidad Dr. Andrés Bello</h2>
+      <p>Facultad de Tecnología e Innovación</p>
+      <span class="footer-line"></span>
+      <small>Portafolio digital académico · 2026</small>
+    </div>
+  </footer>
+
+  <!-- Modal de detalles: combina el modal aportado y los detalles del PDF -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true"
+       aria-labelledby="modal-title" aria-hidden="true" hidden>
+    <div class="modal-panel">
+      <button class="modal-close" id="close-modal" type="button" aria-label="Cerrar ventana">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <span class="section-kicker">Información del proyecto</span>
+      <h2 id="modal-title"></h2>
+      <p class="modal-tool" id="modal-tool"></p>
+      <div class="modal-details-grid">
+        <section><h3>Problemática</h3><p id="modal-problem"></p></section>
+        <section><h3>Solución</h3><p id="modal-solution"></p></section>
+        <section><h3>Objetivo del ejercicio</h3><p id="modal-objective"></p></section>
+        <section><h3>Aprendizaje obtenido</h3><p id="modal-learning"></p></section>
+      </div>
+      <p class="modal-description" id="modal-description"></p>
+      <a class="button button-yellow" id="modal-file-link" href="#" target="_blank" rel="noopener">Abrir trabajo</a>
+      <button class="button button-outline modal-close-bottom" id="modal-close-bottom" type="button">Cerrar ventana</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
